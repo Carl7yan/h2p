@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir LOG SIMV VPD
+
+test="$1"
+time=$2
+
+for ((i = 1;i <= $2;i++))
+do
+  make $1
+done
+

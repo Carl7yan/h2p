@@ -1,0 +1,24 @@
+主要功能：
+1.指定跑某个case
+2.指定跑所有case
+4.加入随机种子，同一个case的每次激励是随机的
+3.单个或多个case可以跑多次
+4.对每个case都生成vpd波形文件
+5.对每个case生成vdb覆盖率文件
+6.可以在进行regression后将覆盖率merge在一起并查看
+
+
+
+All 3 scripts in sim directory is need
+--------------------------------------
+make help         -> check all testcases' number
+./run t1 1        ->
+./run t3 7        ->
+./run regress n   -> this will also generate a summary in the last
+make merge        -> generate two directories: *merged.vdb & *urgReport
+--------------------------------------
+VCS运行完成后，会生成多个文件
+	*LOG文件夹：里面对应有各个case的log信息，该log文件名为case名字+种子名称
+	*VPD文件夹：里面对应各次仿真产生的波形，命名方式同上
+	*SIMV文件夹：里面有各次仿真产生的覆盖率信息，一起产生的中间可执行文件，命名方式同上
+
